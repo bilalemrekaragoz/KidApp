@@ -68,6 +68,7 @@ public class Level1 extends AppCompatActivity {
 
     public void exit(View v)
     {
+        timer.cancel();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -89,6 +90,7 @@ public class Level1 extends AppCompatActivity {
             }
             else
             {
+                timer.cancel();
                 Intent intent = new Intent(this, Level1.class);
                 intent.putExtra("point",point);
                 startActivity(intent);

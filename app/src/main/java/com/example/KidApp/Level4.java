@@ -81,6 +81,7 @@ public class Level4 extends AppCompatActivity {
 
     public void exit(View v)
     {
+        timer.cancel();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
@@ -110,6 +111,7 @@ public class Level4 extends AppCompatActivity {
         }
         else
         {
+            timer.cancel();
             gameOver();
         }
 
